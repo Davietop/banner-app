@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🏡 Real Estate Interactive Banner App
 
-## Getting Started
+This is a **Next.js** + **Tailwind CSS** powered interactive banner application designed for real estate promotions. It features a customizable hero section where users can update images, text, background colors, and more—all via a sleek, dynamic modal interface.
 
-First, run the development server:
+---
 
-```bash
+## ✨ Features
+
+- 🔧 **Edit Mode**: Click the "Edit Banner" button to update:
+  - Background color & image
+  - Room images and labels (dining, bedroom, living)
+  - Main headings & subheadings
+  - Feature list and description
+  - Call-to-action text
+  - Phone number and pricing info
+
+- 🖼️ **Live Preview**: Instantly see updates reflected in the banner.
+
+- 🎨 **Image Uploads**: Upload new images directly from your device.
+
+- ⚡ **Responsive UI** built with Tailwind CSS.
+
+---
+
+## 📁 Project Structure
+
+/components └── EditModal.jsx // Modal form for editing banner content
+
+/pages └── index.jsx // Home page with the editable banner
+
+/public └── fitImage.jpg └── dinning.jpg └── bed.jpg └── living.jpg
+
+## 🚀 Getting Started
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/your-username/banner-app.git
+   cd banner-app
+npm install
+
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Open your browser and go to http://localhost:3000.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Next.js – React framework for production
 
-## Learn More
+Tailwind CSS – Utility-first CSS framework
 
-To learn more about Next.js, take a look at the following resources:
+Headless UI – Accessible modal component
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Google Fonts – Inter and Poppins
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Demo https://drive.google.com/file/d/1iu7KfV26xZjT75BMIS9LcArum0D1iNzz/view?usp=sharing
