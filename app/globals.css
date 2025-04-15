@@ -1,26 +1,43 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@tailwind utilities;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer utilities {
+  .root {
+    position: relative;
+    isolation: isolate;
+    clip-path: polygon(0 0, 100% 0, 57% 80%, 0 60%);
+    z-index: 2;
   }
-}
+  
+  .root::before {
+    content: "";
+    position: absolute;
+    inset: -4px; /* border thickness */
+    z-index: 1;
+    clip-path: polygon(0 0, 100% 0, 57% 80%, 0 60%);
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  }
+  .root2 {
+    position: relative;
+    isolation: isolate;
+    z-index: 2;
+    background-color: #3a3e47; /* dark gray background */
+    /* clip-path: polygon(40% 0%, 100% 30%, 100% 100%, 0 100%, 0 0); */
+    clip-path: polygon(66% 40%, 100% 61%, 100% 100%, 0 100%, 0 100%);
+    overflow: hidden;
+  }
+  
+  .root2::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* full size */
+    z-index: 1;
+    background-color: #3a3e47;
+    clip-path: inherit; /* use same shape */
+    clip-path: polygon(66% 40%, 100% 61%, 100% 100%, 0 100%, 0 100%);
+  }
+  
+
+  
 }
